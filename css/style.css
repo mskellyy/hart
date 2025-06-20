@@ -6,3 +6,24 @@
   --accent: #000000;
   --accent2: #beb3c4;
 }
+
+.coming-soon-container {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  background-image: url("img/hair.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+form {
+  text-align: center;
+}
+
+.container {
+  background-image: url("your-image.jpg"); /* path to your image */
+  background-size: cover; /* make it fill the container */
+  background-repeat: no-repeat; /* no tile/repeat */
+  background-position: center; /* center the image */
+}

@@ -30,6 +30,40 @@
   <body>
     <header></header>
 
+    <div class="coming-soon-container">
+
+      <img src="/img/hart-logo.png" alt="HART" class="hart-logo" width="30%">
+
+    </div>
+
+    <form action="https://formspree.io/f/xnnvbjno" method="POST">
+      <!-- Name -->
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required />
+    </br>
+      <!-- Email -->
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required />
+    </br>
+      <!-- Services -->
+      <p>Which service(s) are you interested in?</p>
+      <label>
+        <input type="checkbox" name="services[]" value="Hair" /> Hair </label
+      ><br />
+      <label>
+        <input type="checkbox" name="services[]" value="Nails" /> Nails </label
+      ><br />
+      <label>
+        <input type="checkbox" name="services[]" value="Headspa" /> Headspa
+      </label>
+    </br>
+      <!-- Hidden anti-bot field -->
+      <input type="text" name="_gotcha" style="display: none" />
+
+      <!-- Submit -->
+      <button type="submit">Notify Me</button>
+    </form>
+
     <footer></footer>
 
     <script
