@@ -3,8 +3,8 @@
   --sub: "Poppins", sans-serif;
   --primary: #544559;
   --secondary: #efede9;
-  --accent: #000000;
-  --accent2: #beb3c4;
+  --accent-dark: #000000;
+  --accent-purp: #beb3c4;
 }
 
 .coming-soon-container {
@@ -18,6 +18,11 @@ form {
   text-align: center;
   color: white;
   font-family: var(--sub);
+  font-weight: 100;
+}
+
+label {
+  margin-bottom: 7px;
 }
 
 input[type="text"],
@@ -37,15 +42,15 @@ button {
   display: block;
   width: 100%;
   max-width: 400px;
-  margin-bottom: 1rem;
+  
 }
 
 input[type="checkbox"] {
   margin-right: 0.5rem;
-  transform: scale(1.2); /* optional: make them slightly larger */
+  transform: scale(1.2); 
+  vertical-align: middle; /* Align checkbox with text */
 }
 
-/* Button hover effect (optional) */
 button:hover {
   background-color: rgba(255, 255, 255, 0.1); /* soft hover effect */
   cursor: pointer;
@@ -72,7 +77,6 @@ form {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  height: 150vh;
 }
 
 .overlay {
@@ -94,10 +98,12 @@ form {
 footer {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  background-color: var(--secondary);
 }
 
 footer h5 {
   font-family: var(--sub);
+  font-weight: 200;
   font-size: 14px;
   padding-left: 10px;
   padding-top: 5px;
@@ -108,10 +114,39 @@ footer h5 {
   margin-right: 5px;
 }
 
+.center-align {
+  text-align: center;
+}
+
+article {
+  padding: 30px;
+  margin-bottom: 40px;
+}
+
+article h1 {
+  font-family: var(--sub);
+  font-weight: 100;
+  font-size: 30px;
+  color: var(--secondary);
+  margin-bottom: 1rem;
+}
+
+article p {
+  font-family: var(--sub);
+  font-weight: 100;
+}
+
 /* ipad */
 @media (max-width: 1024px) {
   .coming-soon-container {
-    height: 95vh;
+    height: 98vh;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  button {
+    width: 250px;
+    font-size: 12px;
   }
 }
 
