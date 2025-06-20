@@ -122,6 +122,17 @@ footer h5 {
   }
 
   form {
-    font-size: 15px;
+    font-size: 12px;
+  }
+
+  footer h5 {
+    font-size: 11px;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  button {
+    width: 250px;
+    font-size: 12px;
   }
 }
