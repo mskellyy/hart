@@ -42,12 +42,11 @@ button {
   display: block;
   width: 100%;
   max-width: 400px;
-  
 }
 
 input[type="checkbox"] {
   margin-right: 0.5rem;
-  transform: scale(1.2); 
+  transform: scale(1.2);
   vertical-align: middle; /* Align checkbox with text */
 }
 
@@ -151,9 +150,10 @@ article p {
 }
 
 /* iphone */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .coming-soon-container {
     padding: 10px;
+    height: 120vh;
   }
 
   form {
