@@ -45,9 +45,33 @@ button {
 }
 
 input[type="checkbox"] {
-  margin-right: 0.5rem;
   transform: scale(1.2);
   vertical-align: middle; /* Align checkbox with text */
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  width: 1.1rem;
+  height: 1.1rem;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background-color: transparent;
+  border-radius: 4px;
+  margin-right: 0.5rem;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+input[type="checkbox"]:checked {
+  background-color: var(--accent-purp);
+}
+
+label {
+  color: #fff;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
 }
 
 button:hover {
