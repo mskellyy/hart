@@ -212,6 +212,10 @@ article p {
     font-size: 14px;
   }
 
+  h4 {
+    margin-top: 60px;
+  }
+
   .coming-soon-container {
     padding: 10px;
     height: 120vh;
