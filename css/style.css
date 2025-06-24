@@ -201,6 +201,17 @@ article p {
 
 /* iphone */
 @media (max-width: 768px) {
+  .hart-logo {
+    width: 100%;
+  }
+
+  article h1 {
+    font-size: 24px;
+  }
+  article p {
+    font-size: 14px;
+  }
+
   .coming-soon-container {
     padding: 10px;
     height: 120vh;
