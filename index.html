@@ -44,7 +44,7 @@
     
 
    <div class="form-wrapper">
-    <form action="https://formspree.io/f/xnnvbjno" method="POST">
+    <form id="contact-form" action="https://formspree.io/f/xnnvbjno" method="POST">
       <!-- Name -->
       <label for="name">Name</label>
       <input type="text" id="name" name="name" required />
@@ -67,13 +67,17 @@
     </br>
       <!-- Hidden anti-bot field -->
       <input type="text" name="_gotcha" style="display: none" />
-        <!-- custom redirect -->
-  <input type="hidden" name="_redirect" value="/thankyou.html">
+
 
       <!-- Submit -->
       <button type="submit">Notify Me</button>
     </form>
     </div>
+
+    <!-- Thank You Message (hidden by default) -->
+<div id="thank-you" style="display:none; color: white; margin-top: 1rem;">
+  Thank you! You’re on the list. 💌
+</div>
 
 
     <h4>Follow us on Instagram</h4>
@@ -88,6 +92,35 @@
       <h5 class="center-align">Where HAIR + ART Come Together</h5>
       <h5 class="right-align">10520-110 STREET</i></h5>
     </footer>
+
+    <script>
+      const form = document.getElementById("contact-form");
+      const thankYou = document.getElementById("thank-you");
+    
+      form.addEventListener("submit", async function (e) {
+        e.preventDefault(); // Prevent normal form submit
+    
+        const formData = new FormData(form);
+    
+        const response = await fetch(form.action, {
+          method: form.method,
+          body: formData,
+          headers: {
+            'Accept': 'application/json'
+          }
+        });
+    
+        if (response.ok) {
+          form.reset();
+          form.style.display = "none";
+          thankYou.style.display = "block";
+        } else {
+          thankYou.innerText = "Oops! Something went wrong.";
+          thankYou.style.display = "block";
+        }
+      });
+    </script>
+    
 
     <script
       src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"
