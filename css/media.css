@@ -1,0 +1,24 @@
+/* ipad */
+@media (max-width: 1024px) {
+}
+
+/* iphone */
+@media (max-width: 768px) {
+  .nav-logo {
+    width: 80%;
+  }
+
+  .navbar-brand {
+    width: 220px;
+  }
+
+  .nav-kitty {
+    width: 80%;
+    margin-left: 10px;
+    margin-top: 20px;
+  }
+
+  .offcanvas-body {
+    margin-top: 60px;
+  }
+}

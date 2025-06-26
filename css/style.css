@@ -6,3 +6,46 @@
   --accent-dark: #000000;
   --accent-purp: #beb3c4;
 }
+
+.offcanvas {
+  width: 300px;
+}
+
+.nav-link {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.navbar {
+  background-color: var(--primary);
+}
+
+.navbar-brand {
+  width: 300px;
+}
+
+.navbar-toggler {
+  background-color: transparent;
+  margin-right: 30px;
+}
+
+.dropdown-menu {
+  position: static;
+  float: none;
+}
+
+.offcanvas-body {
+  margin-top: 100px;
+  font-family: var(--sub);
+  text-transform: uppercase;
+  font-weight: 200;
+  text-align: center;
+}
+
+.offcanvas {
+  background-color: var(--accent-purp);
+}
+
+.offcanvas-header {
+  margin-left: 80px;
+}
