@@ -16,43 +16,32 @@ const observer = new IntersectionObserver(
 
 elementsToAnimate.forEach((element) => observer.observe(element));
 
-// Word animation
-document.addEventListener("DOMContentLoaded", function () {
-  const phrases = [
-    "work harder than you do.",
-    "feel like home to the right people.",
-    "speak before you say a word.",
-    "make sense.",
-  ];
+// Horizontal scroll effect<script>
 
-  let textElement = document.querySelector(".typing-text");
-  let cursor = document.querySelector(".cursor");
-  let index = 0;
-  let charIndex = 0;
-  let isDeleting = false;
-
-  function typeEffect() {
-    let currentPhrase = phrases[index];
-
-    if (isDeleting) {
-      textElement.textContent = currentPhrase.substring(0, charIndex--);
-    } else {
-      textElement.textContent = currentPhrase.substring(0, charIndex++);
-    }
-
-    if (!isDeleting && charIndex === currentPhrase.length + 1) {
-      isDeleting = true;
-      setTimeout(typeEffect, 1000); // Pause before deleting
-    } else if (isDeleting && charIndex === 0) {
-      isDeleting = false;
-      index = (index + 1) % phrases.length; // Move to the next phrase
-      setTimeout(typeEffect, 500); // Pause before typing the next phrase
-    } else {
-      setTimeout(typeEffect, isDeleting ? 50 : 100); // Typing & deleting speed
-    }
-  }
-
-  typeEffect();
+// Initialize Lenis smooth scrolling
+const lenis = new Lenis({
+  lerp: 0.1,
+  smooth: true,
 });
 
-// Navigation toggle
+function raf(time) {
+  lenis.raf(time);
+  requestAnimationFrame(raf);
+}
+
+requestAnimationFrame(raf);
+
+// Horizontal scroll using GSAP ScrollTrigger
+gsap.registerPlugin(ScrollTrigger);
+
+let sections = gsap.utils.toArray(".panel");
+gsap.to(sections, {
+  xPercent: -100 * (sections.length - 1),
+  ease: "none",
+  scrollTrigger: {
+    trigger: ".horizontal-wrapper",
+    pin: true,
+    scrub: 1,
+    end: () => "+=" + document.querySelector(".horizontal-wrapper").offsetWidth,
+  },
+});

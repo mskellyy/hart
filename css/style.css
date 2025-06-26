@@ -18,6 +18,10 @@
 
 .navbar {
   background-color: var(--primary);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
 }
 
 .navbar-brand {
@@ -48,4 +52,26 @@
 
 .offcanvas-header {
   margin-left: 80px;
+}
+
+body {
+  margin: 0;
+  /* no overflow: hidden here */
+}
+
+.horizontal-wrapper {
+  display: flex;
+  height: 100vh;
+  width: 300vw;
+  overflow: hidden; /* restricts scroll only to this section */
+}
+
+.panel {
+  flex: 0 0 100vw;
+  height: 100vh;
+  scroll-snap-align: start;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
 }

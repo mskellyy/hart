@@ -22,3 +22,24 @@
     margin-top: 60px;
   }
 }
+
+/* Horizontal Scrolling Panels */
+
+@media (max-width: 768px) {
+  .horizontal-wrapper {
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+    scroll-snap-type: none !important;
+    margin-top: 125px;
+  }
+
+  .panel {
+    width: 100% !important;
+    height: auto !important;
+    display: block !important;
+    scroll-snap-align: none !important;
+  }
+}
