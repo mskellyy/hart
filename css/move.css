@@ -11,6 +11,18 @@
   transform: translateY(0); /* Return to original position */
 }
 
+/* Fade in from above */
+.a-down {
+  opacity: 0; /* start hidden */
+  transform: translateY(-20px); /* start slightly above */
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.a-down.animate {
+  opacity: 1; /* finish visible */
+  transform: translateY(0); /* end at natural position */
+}
+
 /* fade in left */
 
 .a-left {

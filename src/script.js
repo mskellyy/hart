@@ -1,6 +1,8 @@
 // fade in up, right, left
 
-const elementsToAnimate = document.querySelectorAll(".a-right, .a-left, .a-up");
+const elementsToAnimate = document.querySelectorAll(
+  ".a-right, .a-left, .a-up, .a-down"
+);
 
 const observer = new IntersectionObserver(
   (entries, observer) => {
