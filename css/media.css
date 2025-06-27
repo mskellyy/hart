@@ -3,7 +3,7 @@
 }
 
 /* iphone */
-@media (max-width: 768px) {
+@media (max-width: 765px) {
   .nav-logo {
     width: 80%;
   }
@@ -24,7 +24,6 @@
 }
 
 /* Horizontal Scrolling Panels */
-
 @media (max-width: 768px) {
   .horizontal-wrapper {
     display: block !important;
