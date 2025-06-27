@@ -48,7 +48,7 @@
     transform: none !important;
   }
 
-  img {
+  .panel img {
     width: 100% !important;
     height: auto;
     display: block;

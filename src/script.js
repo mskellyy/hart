@@ -32,25 +32,8 @@ if (window.innerWidth > 768) {
     requestAnimationFrame(raf);
   }
   requestAnimationFrame(raf);
-
   // ✅ Register GSAP plugin
   gsap.registerPlugin(ScrollTrigger);
-
-  // ✅ Sync Lenis with ScrollTrigger
-  ScrollTrigger.scrollerProxy(document.body, {
-    scrollTop(value) {
-      return arguments.length ? lenis.scrollTo(value) : window.scrollY;
-    },
-    getBoundingClientRect() {
-      return {
-        top: 0,
-        left: 0,
-        width: window.innerWidth,
-        height: window.innerHeight,
-      };
-    },
-    pinType: document.body.style.transform ? "transform" : "fixed",
-  });
 
   // ✅ Horizontal scroll effect
   const sections = gsap.utils.toArray(".panel");
@@ -65,10 +48,4 @@ if (window.innerWidth > 768) {
         "+=" + document.querySelector(".horizontal-wrapper").offsetWidth,
     },
   });
-
-  // ✅ Update ScrollTrigger on scroll
-  lenis.on("scroll", ScrollTrigger.update);
-} else {
-  // 🚫 Hard stop on mobile — optional layout reset handled in CSS
-  console.log("Horizontal scroll disabled on mobile.");
 }
