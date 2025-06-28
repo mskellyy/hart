@@ -18,34 +18,24 @@ const observer = new IntersectionObserver(
 
 elementsToAnimate.forEach((element) => observer.observe(element));
 
-// Horizontal scroll effect<script>
+// Horizontal scroll effect
 
-if (window.innerWidth > 768) {
-  // ✅ Load Lenis for smooth scroll
-  const lenis = new Lenis({
-    lerp: 0.1,
-    smooth: true,
-  });
+// 1. register plugin (if you used CDN, GSAP is already on window)
+gsap.registerPlugin(ScrollTrigger);
 
-  function raf(time) {
-    lenis.raf(time);
-    requestAnimationFrame(raf);
-  }
-  requestAnimationFrame(raf);
-  // ✅ Register GSAP plugin
-  gsap.registerPlugin(ScrollTrigger);
+// 2. grab your panels
+const panels = gsap.utils.toArray(".panel");
 
-  // ✅ Horizontal scroll effect
-  const sections = gsap.utils.toArray(".panel");
-  gsap.to(sections, {
-    xPercent: -100 * (sections.length - 1),
-    ease: "none",
-    scrollTrigger: {
-      trigger: ".horizontal-wrapper",
-      pin: true,
-      scrub: 1,
-      end: () =>
-        "+=" + document.querySelector(".horizontal-wrapper").offsetWidth,
-    },
-  });
-}
+// 3. create a horizontal tween driven by scroll
+gsap.to(panels, {
+  xPercent: -100 * (panels.length - 1), // push panels left, one full viewport per panel
+  ease: "none",
+  scrollTrigger: {
+    trigger: ".horizontal-wrapper", // the container
+    start: "top top", // when its top hits the top of viewport
+    end: () => "+=" + panels.length * window.innerWidth,
+    scrub: 1, // smooth scrubbing (seconds of inertia)
+    pin: true, // pin the wrapper in place
+    anticipatePin: 1, // helps avoid jump when pinning
+  },
+});
