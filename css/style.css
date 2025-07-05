@@ -159,3 +159,32 @@ section p {
   text-align: end;
   margin-right: 20px;
 }
+
+/* Booking */
+
+.hero-booking {
+  background-image: url(../img/mock1.jpeg);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 50vh;
+}
+
+.hero-booking h1 {
+  color: var(--secondary);
+  font-family: var(--heading);
+  font-weight: 100;
+  font-size: 130px;
+  text-align: center;
+  padding-top: 100px;
+}
+
+.hero-booking p {
+  color: var(--secondary);
+  font-family: var(--sub);
+  font-weight: 200;
+  font-size: 18px;
+  margin-top: 180px;
+  text-align: end;
+  margin-right: 20px;
+}
