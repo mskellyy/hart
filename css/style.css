@@ -91,7 +91,10 @@ section p {
 }
 
 .hair-section {
-  background-color: var(--accent-purp);
+  background-image: url(../img/hair_67.jpeg);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 
 .nail-section {
@@ -99,7 +102,10 @@ section p {
 }
 
 .headspa-section {
-  background-color: var(--accent-purp);
+  background-image: url(../img/hair_61.jpeg);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 
 /* ABOUT */
