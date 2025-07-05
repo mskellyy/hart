@@ -104,7 +104,7 @@ section p {
 
 /* ABOUT */
 
-.hero {
+.hero-about {
   background-image: url(../img/hair3.jpg);
   background-size: cover;
   background-position: center center;
@@ -112,7 +112,7 @@ section p {
   height: 50vh;
 }
 
-.hero h1 {
+.hero-about h1 {
   color: var(--secondary);
   font-family: var(--heading);
   font-weight: 100;
@@ -121,7 +121,36 @@ section p {
   padding-top: 100px;
 }
 
-.hero p {
+.hero-about p {
+  color: var(--secondary);
+  font-family: var(--sub);
+  font-weight: 200;
+  font-size: 18px;
+  margin-top: 180px;
+  text-align: end;
+  margin-right: 20px;
+}
+
+/* CONTACT */
+
+.hero-contact {
+  background-image: url(../img/mock1.jpeg);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 50vh;
+}
+
+.hero-contact h1 {
+  color: var(--secondary);
+  font-family: var(--heading);
+  font-weight: 100;
+  font-size: 130px;
+  text-align: center;
+  padding-top: 100px;
+}
+
+.hero-contact p {
   color: var(--secondary);
   font-family: var(--sub);
   font-weight: 200;
