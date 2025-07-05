@@ -86,6 +86,30 @@ section p {
   text-align: center;
 }
 
+.hart-button {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 999px;
+  color: #fff;
+  appearance: none;
+  transition: all 0.3s ease;
+  text-align: center;
+  letter-spacing: 0.05em;
+  display: block;
+  width: 300px;
+  text-decoration: none;
+  margin-top: 30px;
+  padding: 2px 2px;
+}
+
+.hart-button p {
+  font-family: var(--sub);
+  font-weight: 200;
+  font-size: 20px;
+  color: var(--secondary);
+  text-transform: uppercase;
+}
+
 /* SERVICES */
 .main-section {
   background-color: var(--accent-purp);
