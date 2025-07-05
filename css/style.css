@@ -79,8 +79,7 @@ body {
 section p {
   font-family: var(--sub);
   font-weight: 200;
-  font-size: 20px;
-  width: 500px;
+  font-size: 40px;
   text-transform: uppercase;
   color: var(--accent-dark);
   text-align: center;
@@ -93,12 +92,11 @@ section p {
   color: #fff;
   appearance: none;
   transition: all 0.3s ease;
-
   display: block;
   width: 200px;
   text-decoration: none;
   margin-top: 30px;
-  padding: 2px 2px;
+  padding: 2px 2px 2px;
 }
 
 .hart-button:hover {
