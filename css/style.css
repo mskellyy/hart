@@ -70,6 +70,7 @@ body {
   height: 100vh;
   scroll-snap-align: start;
   display: flex;
+  gap: 10px;
   align-items: center;
   justify-content: center;
   font-size: 3rem;
@@ -87,7 +88,7 @@ section p {
 
 /* SERVICES */
 .main-section {
-  background-color: var(--secondary);
+  background-color: var(--accent-purp);
 }
 
 .hair-section {
